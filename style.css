@@ -220,7 +220,7 @@ p {
   top: 10px;
   right: 25px;
   font-size: 24px;
-  color: #191919; /* Darker color for the close button */
+  color: #ffffff; /* Darker color for the close button */
   cursor: pointer;
 }
 
@@ -1949,3 +1949,5 @@ p {
   color: var(--white);
   background-color: var(--primary-dark);
 }
+
+
