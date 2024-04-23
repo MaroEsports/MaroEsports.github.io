@@ -38,6 +38,7 @@
 
   <link rel="stylesheet" href="file.css" />
 
+
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-T5D9VM21KR">
 </script>
@@ -162,14 +163,17 @@
             </p>
             <div class="button">
               <a href="javascript:void(0)" class="btn primary-btn">Get Started</a>
-              <a href="https://youtu.be/IZbDSoqQjzw"
-                class="glightbox video-button">
+              <a href="#" onclick="playVideo()" 
+                class="video-button">
                 <span class="btn icon-btn rounded-full">
                   <i class="lni lni-play"></i>
                 </span>
                 <span class="text">Watch Intro</span>
               </a>
             </div>
+
+
+
           </div>
         </div>
         <div class="col-lg-6 col-md-12 col-12">
@@ -1094,6 +1098,13 @@
     <i class="lni lni-chevron-up"></i>
   </a>
 
+  <div id="videoModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeVideo()">&times;</span>
+        <iframe id="youtubeVideo" width="800" height="515" src="https://www.youtube.com/embed/IZbDSoqQjzw" frameborder="0" allowfullscreen></iframe>
+    </div>
+</div>
+
   <!--====== js ======-->
   <script src="assets/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/glightbox.min.js"></script>
@@ -1169,6 +1180,23 @@ imageContainer.addEventListener('mouseout', () => {
         ftypes[0] = 'email';
     }(jQuery));
     var $mcj = jQuery.noConflict(true);
+</script>
+
+
+<script>
+  function playVideo() {
+      var modal = document.getElementById('videoModal');
+      var video = document.getElementById('youtubeVideo');
+      modal.style.display = "block";
+      video.src = "https://www.youtube.com/embed/IZbDSoqQjzw?autoplay=1";
+  }
+
+  function closeVideo() {
+      var modal = document.getElementById('videoModal');
+      var video = document.getElementById('youtubeVideo');
+      modal.style.display = "none";
+      video.src = "https://www.youtube.com/embed/IZbDSoqQjzw";
+  }
 </script>
 </body>
 
